@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+.containerSearch {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffe600;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.containerSearch .subcontainerSearch {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 61%;
+  img {
+    margin-right: 10px;
+  }
+  input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+    border: lightgray;
+  }
+  .link {
+    width: 100%;
+    background-color: #eeeeee;
+    border: lightgray;
+    height: 40px;
+    width: 40px;
+    img {
+      margin: 10px;
+    }
+  }
+}
