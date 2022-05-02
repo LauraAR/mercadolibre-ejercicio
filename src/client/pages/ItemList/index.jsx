@@ -59,8 +59,6 @@ const ItemList = () => {
   const params = useParams();
 
   const dispatch = useDispatch();
-  // eslint-disable-next-line no-debugger
-  debugger;
 
   dispatch(getItemListIfNeed(params.search));
 
