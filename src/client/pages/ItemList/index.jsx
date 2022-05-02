@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Loading from 'client/components/Loading';
 import CategoryList from 'client/components/CategoryList';
-import useIsomorphicLayoutEffect from 'client/hooks/useIsomorphicLayoutEffect';
 import { getItemListIfNeed } from 'client/store/slices/item-list-slice';
 import { STATUS } from 'configs/constants';
 
@@ -36,7 +35,7 @@ const ItemListAsync = memo(() => {
           <Row>
             <Col xs={5} sm={5} md={3} lg={2}>
               <Link to={`/items/${item.id}`}>
-                <img src={item.thumbnail} alt='' />
+                <img src={item.thumbnail} alt='' crossOrigin='anonymous' />
               </Link>
             </Col>
             <Col xs={4} sm={4} md={5} lg={5}>
@@ -60,10 +59,11 @@ const ItemList = () => {
   const params = useParams();
 
   const dispatch = useDispatch();
+  // eslint-disable-next-line no-debugger
+  debugger;
 
-  useIsomorphicLayoutEffect(() => {
-    dispatch(getItemListIfNeed(params.search));
-  }, []);
+  dispatch(getItemListIfNeed(params.search));
+
   return (
     <div className='container'>
       <ItemListAsync />

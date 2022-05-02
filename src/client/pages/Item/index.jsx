@@ -42,7 +42,7 @@ const ItemAsync = memo(() => {
       <div className='subcontainer-item'>
         <Row>
           <Col xs={8} sm={8} md={8} lg={8}>
-            <img src={item?.data?.secure_thumbnail} alt='' className='img' />
+            <img src={item?.data?.pictures[0].url} alt='' className='img' crossOrigin='anonymous' />
           </Col>
           <Col xs={4} sm={4} md={4} lg={4}>
             <p className='quantity'>
