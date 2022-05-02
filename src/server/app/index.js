@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import compression from 'compression';
 import serve from 'serve-static';
 
+import serverConfig from 'configs/server';
 import render from '../render';
 
 const app = express();
@@ -56,6 +57,6 @@ app.use((req, res, _next) =>
   }),
 );
 
-app.listen(3000, () => console.log('server started htpp://localhost:3000'));
+app.listen(serverConfig.PORT, () => console.log('server started'));
 
 export default app;

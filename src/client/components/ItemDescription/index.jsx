@@ -1,6 +1,7 @@
 import React, { memo, useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
 const fetch = require('node-fetch');
 
 const ItemDescription = (itemId) => {
